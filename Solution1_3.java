@@ -1,4 +1,4 @@
-package solution1_3;
+package chapter_1;
 
 /** Design an algorithm and write code to remove the duplicate characters in a string
  * 	without using any additional buffer  NOTE: One or two additional variables are fine   
@@ -18,13 +18,13 @@ public class Solution1_3 {
 				new StringBuffer("ababa"),
 		};
 		
-		for (int i = 0; i < str_array.length; i++){
-			rmdup(str_array[i]);
-			System.out.println(str_array[i].toString());
+		for (StringBuffer str : str_array){
+			rmdup(str);
+			System.out.println(str.toString());
 		}
 	}
 	
-	public static void rmdup(StringBuffer str){	//the function to remove duplicate characters
+	private static void rmdup(StringBuffer str){	//the function to remove duplicate characters
 		if (str == null) {
 			return;
 		}
